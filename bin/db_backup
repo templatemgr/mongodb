@@ -1,0 +1,5 @@
+#!/bin/bash
+DIR="$(date +%d-%m-%y)"
+DEST="$BACKUP_DIR/mongodb"
+mkdir "$DEST"
+mongodump -h localhost:27017 -d $1 -o "$DEST"
